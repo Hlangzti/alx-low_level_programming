@@ -1,30 +1,19 @@
-/*
- * File: 9-print_comb.c
- * Auth: Brennan D Baraban
- */
-
-#include <stdio.h>
-
-/**
- * main - Prints all possible combinations of single-digit numbers.
- *
- * Return: Always 0.
- */
-int main(void)
+@@ -8,10 +8,10 @@ int main(void)
 {
-	int num;
+	int i = '0';
 
-	for (num = 0; num <= 9; num++)
+	while(i <= '9')
+	while (i <= '9')
 	{
-		putchar((num % 10) + '0');
-		if (num == 9)
-			continue;
-		
-		putchar(',');
-		putchar(' ');
+		putchar(i);
+		if(i != '9')
+		if (i != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		++i;
 	}
-
 	putchar('\n');
-
 	return (0);
 }
