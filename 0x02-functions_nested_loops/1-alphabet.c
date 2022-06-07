@@ -1,7 +1,7 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_alphabet - check the code for Holberton School students.
+ * print_alphabet - check the code for alx students.
  *
  * Return: Always 0.
  */
