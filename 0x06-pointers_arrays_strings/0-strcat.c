@@ -1,37 +1,27 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * *_strcat - concatenates two strings.
- *
- * @dest: resulting string.
- * @src: source string.
- * Return: pointer to dest
+ *_strcat - concatinate 2 strings.
+ *@dest: first string.
+ *@src: second string.
+ *Return: string.
  */
+
 char *_strcat(char *dest, char *src)
 {
-	int i, n;
+	int i = 0, j = 0;
 
-	n = string_length(dest);
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[j] != '\0')
 	{
-		dest[n + i] = src[i];
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	dest[n + i] = '\0';
+
+	dest[i] = '\0';
+
 	return (dest);
-}
-
-/**
-  * string_length - finds the length of a string.
-  * Return: length of c.
-  * @pointer: pointer.
-  */
-int string_length(char *pointer)
-{
-	int c = 0;
-
-	while (*(pointer + c) != '\0')
-	{
-		c++;
-	}
-	return (c);
 }
